@@ -7,22 +7,11 @@ function CountryInfo({ data }) {
       <Card.Body>
         <Row>
           <Col md={4} className="text-center">
-            <img
-              src={data.flags.png}
-              alt={`Drapeau de ${data.name.common}`}
-              style={{ width: '100%', maxWidth: '250px', borderRadius: '10px' }}
-            />
+            <img src={data.flags.png} alt={`Drapeau de ${data.name.common}`} style={{ width: '100%', maxWidth: '250px', borderRadius: '10px' }} />
           </Col>
           <Col md={8}>
             <Card.Title className="mb-4">
-              <a
-                href={`https://www.google.com/maps/search/${data.name.common}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-danger text-decoration-none"
-              >
-                {data.name.common}
-              </a>
+              <a href={`https://www.google.com/maps/search/${data.name.common}`} target="_blank" rel="noopener noreferrer" className="text-danger text-decoration-none" > {data.name.common}</a>
             </Card.Title>
             <Card.Text>
               <strong>Capitale :</strong> {data.capital ? data.capital[0] : 'N/A'}
@@ -39,14 +28,7 @@ function CountryInfo({ data }) {
             <Card.Text>
               <strong>Superficie :</strong> {data.area.toLocaleString()} km²
             </Card.Text>
-            <Button
-              variant="outline-primary"
-              href={`https://www.google.com/maps/search/${data.name.common}`}
-              target="_blank"
-            >
-              Voir sur Google Maps
-            </Button>
-          </Col>
+            <Button  variant="outline-primary"  href={`https://www.google.com/maps/search/${data.name.common}`} target="_blank" > Voir sur Google Maps </Button> </Col>
         </Row>
       </Card.Body>
     </Card>
